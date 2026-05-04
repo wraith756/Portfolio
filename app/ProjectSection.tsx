@@ -4,60 +4,70 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import ProjectsData from "./data/project"; // Importing the projects array
+// const projects = [
+//   {
+//     name: "Zenvilla",
+//     image: "/zenvilla.png",
+//     desc: "Real estate platform with advanced filtering and scalable backend",
+//     tech: ["Next.js", "Express", "PostgreSQL", "AWS"],
+//     live: "#",
+//     github: "https://github.com/wraith756/ZenVillLa",
+//   },
+//   {
+//     name: "E-Learning Platform",
+//     image: "/Elearning.png",
+//     desc: "A full-stack e-learning platform that allows teachers to create and manage courses with media uploads, while students can browse and access content seamlessly.",
+//     tech: ["Next.js", "Express", "PostgreSQL", "Supabase", "Tailwind CSS"],
+//     live: "#",
+//     github: "#",
+//   },
 
-const projects = [
-  {
-    name: "Zenvilla",
-    image: "/zenvilla.png",
-    desc: "Real estate platform with advanced filtering and scalable backend",
-    tech: ["Next.js", "Express", "PostgreSQL", "AWS"],
-    live: "#",
-    github: "https://github.com/wraith756/ZenVillLa",
-  },
-  {
-    name: "E-Learning Platform",
-    image: "/Elearning.png",
-    desc: "A full-stack e-learning platform that allows teachers to create and manage courses with media uploads, while students can browse and access content seamlessly.",
-    tech: ["Next.js", "Express", "PostgreSQL", "Supabase", "Tailwind CSS"],
-    live: "#",
-    github: "#",
-  },
-
-  {
-    name: "BanterBox",
-    image: "/BanterBox.png",
-    desc: "Real-time chat app with Socket.io",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
-    live: "#",
-    github: "https://github.com/wraith756/BanterBox-Chat-App",
-  },
-  {
-    name: "AI Chat Assistant",
-    image: "/AI.png",
-    desc: "Real-time AI chat app using Gemini API",
-    tech: ["React", "Gemini API"],
-    live: "#",
-    github: "#",
-  },
-  {
-    name: "ShadowDrop",
-    image: "/shadowdrop.png",
-    desc: "A fast, secure steganography system that encrypts and hides messages inside images using AES and LSB techniques.",
-    tech: ["React", "FastAPI", "Cryptography", "NumPy", "Pillow"],
-    live: "#",
-    github: "https://github.com/wraith756/ShadowDrop",
-  },
-  {
-    name: "Next-Gen Assistant",
-    image: "/NextGEN.png",
-    desc: "Next Gen-AI is a RAG-based intelligent assistant integrated with n8n to deliver context-aware, automated, and real-time responses across connected applications.",
-    tech: ["Python", "FastAPI", "LangChain", "n8n", "OpenAI API"],
-    live: "#",
-    github: "#",
-  },
-];
+//   {
+//     name: "BanterBox",
+//     image: "/BanterBox.png",
+//     desc: "Real-time chat app with Socket.io",
+//     tech: ["MongoDB", "Express", "React", "Node.js"],
+//     live: "#",
+//     github: "https://github.com/wraith756/BanterBox-Chat-App",
+//   },
+//   {
+//     name: "AI Chat Assistant",
+//     image: "/AI.png",
+//     desc: "Real-time AI chat app using Gemini API",
+//     tech: ["React", "Gemini API"],
+//     live: "#",
+//     github: "#",
+//   },
+//   {
+//     name: "ShadowDrop",
+//     image: "/shadowdrop.png",
+//     desc: "A fast, secure steganography system that encrypts and hides messages inside images using AES and LSB techniques.",
+//     tech: ["React", "FastAPI", "Cryptography", "NumPy", "Pillow"],
+//     live: "#",
+//     github: "https://github.com/wraith756/ShadowDrop",
+//   },
+//   {
+//     name: "Next-Gen Assistant",
+//     image: "/NextGEN.png",
+//     desc: "Next Gen-AI is a RAG-based intelligent assistant integrated with n8n to deliver context-aware, automated, and real-time responses across connected applications.",
+//     tech: ["Python", "FastAPI", "LangChain", "n8n", "OpenAI API"],
+//     live: "#",
+//     github: "#",
+//   },
+//   {
+//     name: "Twitter Sentiment Analysis",
+//     image: "/twitter.png",
+//     desc: "Real-time sentiment analysis system that scrapes Twitter data using Selenium and applies NLP and machine learning models to classify user sentiment.",
+//     tech: ["Python", "Selenium", "NLP", "Scikit-learn", "Pandas"],
+//     live: "#",
+//     github: "#",
+//   },
+// ];
 
 export default function Projects() {
+  const router = useRouter();
   return (
     <section
       className="bg-[#0f0f0f] text-white py-24 px-6 md:px-20"
@@ -74,7 +84,7 @@ export default function Projects() {
 
       {/* GRID */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project, index) => (
+        {ProjectsData.slice(0, 6).map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}
@@ -139,11 +149,14 @@ export default function Projects() {
       </div>
 
       {/* VIEW ALL BUTTON */}
-      {/* <div className="flex justify-center mt-12">
-        <button className="bg-yellow-400 text-black px-6 py-3 rounded-full hover:bg-yellow-300 hover:scale-105 transition">
+      <div className="flex justify-center mt-12">
+        <button
+          onClick={() => router.push("/project")}
+          className="bg-yellow-400 text-black px-6 py-3 rounded-full hover:bg-yellow-300 hover:scale-105 transition"
+        >
           View All →
         </button>
-      </div> */}
+      </div>
     </section>
   );
 }
