@@ -46,7 +46,7 @@ const projects = [
     desc: "Next Gen-AI is a RAG-based intelligent assistant integrated with n8n to deliver context-aware, automated, and real-time responses across connected applications.",
     tech: ["Python", "FastAPI", "LangChain", "n8n", "OpenAI API"],
     live: "#",
-    github: "#",
+    github: "https://github.com/wraith756/Next-GEN_AI.git",
   },
   {
     name: "Twitter Sentiment Analysis",
@@ -54,7 +54,7 @@ const projects = [
     desc: "Real-time sentiment analysis system that scrapes Twitter data using Selenium and applies NLP and machine learning models to classify user sentiment.",
     tech: ["Python", "Selenium", "NLP", "Scikit-learn", "Pandas"],
     live: "#",
-    github: "#",
+    github: "https://github.com/wraith756/Twitter-sentiment-Analysis.git",
   },
 ];
 
