@@ -56,6 +56,14 @@ const projects = [
     live: "#",
     github: "https://github.com/wraith756/Twitter-sentiment-Analysis.git",
   },
+  {
+    name: "Exam-Cheating-Detection",
+    image: "/exam-cheating-detection.png",
+    desc: "Real-time AI proctoring system for online examinations with face detection, eye tracking, object detection, audio monitoring, and automated violation reporting.",
+    tech: ["Python", "OpenCV", "MediaPipe", "YOLOv8", "PyTorch", "Flask"],
+    live: "#",
+    github: "https://github.com/wraith756/Exam-Cheating-Detection",
+  },
 ];
 
 export default projects;
