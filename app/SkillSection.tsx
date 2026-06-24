@@ -19,6 +19,12 @@ const skills = [
   { name: "GitHub", icon: "/skills/github.png", level: 85 },
   { name: "Selenium", icon: "/skills/Selenium.png", level: 70 },
   { name: "Electron", icon: "/skills/Electron.png", level: 65 },
+  { name: "Java", icon: "/skills/java.png", level: 65 },
+  { name: "Wordpress", icon: "/skills/wordpress.png", level: 65 },
+  { name: "Postman", icon: "/skills/Postman.png", level: 65 },
+  { name: "MongoDB", icon: "/skills/MongoDB.png", level: 65 },
+  { name: "C", icon: "/skills/C.png", level: 65 },
+  
 ];
 
 // split rows
