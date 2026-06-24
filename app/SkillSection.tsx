@@ -6,10 +6,10 @@ import Image from "next/image";
 import { useRef } from "react";
 
 const skills = [
-  { name: "React", icon: "/skills/react.png", level: 90 },
+  { name: "React", icon: "/skills/React.png", level: 90 },
   { name: "Next.js", icon: "/skills/Next.js.png", level: 85 },
   { name: "JavaScript", icon: "/skills/javascript.png", level: 88 },
-  { name: "TypeScript", icon: "/skills/typescript.png", level: 82 },
+  { name: "TypeScript", icon: "/skills/TypeScript.png", level: 82 },
   { name: "Node.js", icon: "/skills/Node.js.png", level: 85 },
   { name: "Python", icon: "/skills/Python.png", level: 80 },
   { name: "FastAPI", icon: "/skills/FastAPI.png", level: 75 },
@@ -17,7 +17,7 @@ const skills = [
   { name: "C++", icon: "/skills/C++.png", level: 75 },
   { name: "HTML5", icon: "/skills/HTML5.png", level: 92 },
   { name: "GitHub", icon: "/skills/github.png", level: 85 },
-  { name: "Selenium", icon: "/skills/selenium.png", level: 70 },
+  { name: "Selenium", icon: "/skills/Selenium.png", level: 70 },
   { name: "Electron", icon: "/skills/Electron.png", level: 65 },
 ];
 
